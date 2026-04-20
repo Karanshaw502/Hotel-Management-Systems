@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Hotel - Luxury Stay Experience</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <i class="fas fa-hotel"></i> Grand Hotel
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/rooms">Rooms</a></li>
+                <li><a href="/booking">Book Now</a></li>
+                <li id="authLinks">
+                    <a href="/login">Login</a>
+                    <a href="/signup" class="btn-nav">Sign Up</a>
+                </li>
+                <li id="userLinks" style="display: none;">
+                    <a href="/booking"><i class="fas fa-user"></i> <span id="userName">User</span></a>
+                    <button onclick="logout()" class="btn-logout">Logout</button>
+                </li>
+                <li id="adminLink" style="display: none;">
+                    <a href="/admin"><i class="fas fa-cog"></i> Admin</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Grand Hotel</h1>
+            <p>Experience luxury and comfort like never before</p>
+            <a href="/rooms" class="btn btn-primary">Explore Rooms</a>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-concierge-bell"></i>
+                    <h3>Premium Service</h3>
+                    <p>24/7 concierge service to meet all your needs</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-wifi"></i>
+                    <h3>Free Wi-Fi</h3>
+                    <p>High-speed internet throughout the hotel</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-spa"></i>
+                    <h3>Spa & Wellness</h3>
+                    <p>Relax and rejuvenate at our spa center</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Fine Dining</h3>
+                    <p>World-class restaurants with gourmet cuisine</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rooms-preview">
+        <div class="container">
+            <h2>Our Rooms</h2>
+            <p class="section-subtitle">Choose from our selection of premium rooms and suites</p>
+            <div class="rooms-grid" id="featuredRooms">
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="/images/room1.jpeg" alt="Standard Room">
+                    </div>
+                    <div class="room-info">
+                        <h3>Standard Room</h3>
+                        <p class="room-price">₹2999<span>/night</span></p>
+                        <a href="/rooms" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="/images/room2.jpeg" alt="Standard Room">
+                    </div>
+                    <div class="room-info">
+                        <h3>Deluxe Room</h3>
+                        <p class="room-price">₹4999<span>/night</span></p>
+                        <a href="/rooms" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="/images/room3.jpeg" alt="Standard Room">
+                    </div>
+                    <div class="room-info">
+                        <h3>Executive Suite</h3>
+                        <p class="room-price">₹3999<span>/night</span></p>
+                        <a href="/rooms" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Grand Hotel</h3>
+                    <p>Your premium destination for luxury accommodation</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/rooms">Rooms</a></li>
+                        <li><a href="/booking">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +91 9123301519 - Mr.Karan Shaw</p>
+
+                    <p><i class="fas fa-envelope"></i> krohit2417@gmail.com</p>
+                    
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Grand Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/auth.js"></script> 
+    <!-- <script src="/js/main.js"></script>  -->
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Rooms - Grand Hotel</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <i class="fas fa-hotel"></i> Grand Hotel
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/rooms" class="active">Rooms</a></li>
+                <li><a href="/booking">Book Now</a></li>
+                <li id="authLinks">
+                    <a href="/login">Login</a>
+                    <a href="/signup" class="btn-nav">Sign Up</a>
+                </li>
+                <li id="userLinks" style="display: none;">
+                    <a href="/booking"><i class="fas fa-user"></i> <span id="userName">User</span></a>
+                    <button onclick="logout()" class="btn-logout">Logout</button>
+                </li>
+                <li id="adminLink" style="display: none;">
+                    <a href="/admin"><i class="fas fa-cog"></i> Admin</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Rooms & Suites</h1>
+            <p>Discover the perfect room for your stay</p>
+        </div>
+    </section>
+
+    <section class="rooms-section">
+        <div class="container">
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="typeFilter">Room Type:</label>
+                    <select id="typeFilter">
+                        <option value="">All Types</option>
+                        <option value="standard">Standard</option>
+                        <option value="deluxe">Deluxe</option>
+                        <option value="suite">Suite</option>
+                        <option value="presidential">Presidential</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="statusFilter">Status:</label>
+                    <select id="statusFilter">
+                        <option value="">All Status</option>
+                        <option value="available">Available</option>
+                        <option value="booked">Booked</option>
+                    </select>
+                </div>
+                <button onclick="loadRooms()" class="btn btn-secondary">
+                    <i class="fas fa-filter"></i> Apply Filters
+                </button>
+            </div>
+
+            <div id="roomsContainer" class="rooms-grid">
+                <div class="loading">Loading rooms...</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Grand Hotel</h3>
+                    <p>Your premium destination for luxury accommodation</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/rooms">Rooms</a></li>
+                        <li><a href="/booking">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +91 9123301519 - Mr.Karan Shaw</p>
+                    <p><i class="fas fa-envelope"></i> krohit2417@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Grand Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/rooms.js"></script>
+</body>
+</html>
